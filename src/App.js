@@ -12,8 +12,15 @@ function App() {
 }
 
 const SourceText = () => {
-	return source_text;	
+	return (
+		<p onClick={handleClick}>{`${source_text}`}
+		</p>
+	);	
 }
 
+function handleClick(event) {
+	const word = event.target.textContent;
+	console.log(event)
+}
 
 export default App;
